@@ -1,4 +1,3 @@
-
 class MoviesController < ApplicationController
 
 def index
@@ -21,14 +20,10 @@ m.duration = params["duration"]
 m.description = params["description"]
 m.image_url = params["image_url"]
 m.save
-redirect_to("http://localhost:3000/movies")
+
+render ("show")
 end
 
-def destroy
-@movie = Movie.find(params["id"])
-@movie.destroy
-render("destroy.html.erb")
-end
 
 def edit_form
 @movie = Movie.find(params["id"])
@@ -46,5 +41,10 @@ m.save
 redirect_to("http://localhost:3000/movies")
 end
 
+def destroy
+    @movies = Movie.find(params[:id])
+    @movies.destroy
+    redirect_to "/"
+  end
 
 end

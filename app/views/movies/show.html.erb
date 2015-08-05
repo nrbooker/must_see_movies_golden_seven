@@ -1,0 +1,14 @@
+<h1>Movie: <%=@movie.title%></h1>
+
+<table>
+
+<dd><img src="<%= @movie.image_url %>" </dd>
+
+<dt>Year Released: <%= @movie.year %></dt>
+
+<dt>Duration: <%= @movie.duration %> minutes</dt>
+
+<dt>Plot: </dt>
+<dd><%= @movie.description %></dd>
+
+</table>

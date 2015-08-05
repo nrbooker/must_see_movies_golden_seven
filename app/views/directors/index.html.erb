@@ -1,4 +1,4 @@
-<h1> Directors </h1>
+<h1> Meet the Directors </h1>
 
 <p><a href="/directors/new_form">Add a New Director</a></p>
 
@@ -22,7 +22,7 @@
 <td colspan="3"><%=truncate(director.bio, length: 300) %></td>
 
 <td><a href="http://localhost:3000/directors/<%= director.id %>">Show</a></td>
-<td><a href="http://localhost:3000/directors/<%= director.id %>/edit">Edit</a></td>
+<td><a href="http://localhost:3000/directors/<%= director.id %>/edit_form">Edit</a></td>
 <td><a href="http://localhost:3000/delete_director/<%= director.id %>">Delete</a></td>
 
 </tr>
