@@ -12,8 +12,9 @@ class ActorsController < ApplicationController
 
   def create_row
     @actor = Actor.new
-    @actor.dob = params[:dob]
     @actor.name = params[:name]
+
+    @actor.dob = params[:dob]
     @actor.bio = params[:bio]
     @actor.image_url = params[:image_url]
 
@@ -41,7 +42,7 @@ class ActorsController < ApplicationController
 
   def destroy
     @actor = Actor.find(params[:id])
-
     @actor.destroy
+    redirect_to "/"
   end
 end

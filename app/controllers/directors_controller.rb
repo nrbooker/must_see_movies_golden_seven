@@ -26,11 +26,11 @@ class DirectorsController < ApplicationController
     @director = Director.find(params[:id])
   end
 
-  def update_row
+  def update_director
     @director = Director.find(params[:id])
 
-    @director.dob = params[":dob"]
     @director.name = params[":name"]
+    @director.dob = params[":dob"]
     @director.bio = params[":bio"]
     @director.image_url = params[":image_url"]
 
@@ -41,7 +41,7 @@ class DirectorsController < ApplicationController
 
   def destroy
     @director = Director.find(params[:id])
-
     @director.destroy
+    redirect_to "/"
   end
 end
